@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tzedek Law LLC | Home</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2696.svg"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-black: #0a0a0a;
+        --secondary-black: #1a1a1a;
+        --primary-red: #d90429;
+        --secondary-red: #ef233c;
+        --primary-white: #ffffff;
+        --light-gray: #f8f9fa;
+        --dark-gray: #2b2d42;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-white);
+        background-color: var(--primary-black);
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* Animated background elements */
+      .bg-circles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--primary-red);
+        opacity: 0.1;
+        filter: blur(40px);
+        animation: float 15s infinite linear;
+      }
+
+      .circle:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 10%;
+        animation-duration: 20s;
+      }
+
+      .circle:nth-child(2) {
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        right: 5%;
+        animation-duration: 25s;
+        animation-delay: 2s;
+      }
+
+      .circle:nth-child(3) {
+        width: 400px;
+        height: 400px;
+        bottom: 5%;
+        left: 5%;
+        animation-duration: 30s;
+        animation-delay: 1s;
+      }
+
+      .circle:nth-child(4) {
+        width: 350px;
+        height: 350px;
+        top: 15%;
+        right: 15%;
+        animation-duration: 22s;
+        animation-delay: 3s;
+      }
+
+      .circle:nth-child(5) {
+        width: 450px;
+        height: 450px;
+        bottom: 15%;
+        right: 20%;
+        animation-duration: 28s;
+        animation-delay: 4s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, 30px) rotate(90deg);
+        }
+        50% {
+          transform: translate(0, 60px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-20px, 30px) rotate(270deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: rgba(10, 10, 10, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: var(--primary-white);
+        font-size: 1.8rem;
+      }
+
+      .navbar-brand span {
+        color: var(--primary-red);
+      }
+
+      .nav-link {
+        color: var(--primary-white);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-red);
+        transition: var(--transition);
+      }
+
+      .nav-link:hover {
+        color: var(--primary-red);
+      }
+
+      .nav-link:hover:before {
+        width: 100%;
+      }
+      .nav-logo {
+        height: 50px;
+        width: auto;
+      }
+      .navbar-toggler {
+        border: none;
+        color: var(--primary-white);
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      /* Hero Section with Background Image */
+      .hero-section {
+        background: linear-gradient(
+            rgba(10, 10, 10, 0.85),
+            rgba(10, 10, 10, 0.85)
+          ),
+          url("https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/JPEG.jpg")
+            no-repeat center center/cover;
+        color: var(--primary-white);
+        padding: 150px 0 100px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-top: 350px; /* Added to push content down */
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: var(--primary-red);
+        color: var(--primary-white);
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: -20px; /* Reduced margin */
+        letter-spacing: 1px;
+        position: relative;
+        top: -350px; /* Moved badge up */
+      }
+
+      /* Content Sections */
+      .content-section {
+        padding: 100px 0;
+      }
+
+      .content-section h2 {
+        position: relative;
+        margin-bottom: 50px;
+        font-weight: 700;
+        color: var(--primary-white);
+        text-align: center;
+      }
+
+      .content-section h2:after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        background: var(--primary-red);
+        margin: 15px auto;
+      }
+
+      .content-section.light-bg {
+        background-color: var(--secondary-black);
+      }
+
+      .content-section.white-bg {
+        background-color: var(--primary-white);
+        color: var(--primary-black);
+      }
+
+      .content-section.white-bg h2 {
+        color: var(--primary-black);
+      }
+
+      /* Feature Cards */
+      .feature-card {
+        text-align: center;
+        padding: 30px 20px;
+        background: var(--secondary-black);
+        border-radius: 8px;
+        transition: var(--transition);
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(186, 23, 23, 0.89);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(255, 3, 3, 0.89);
+      }
+
+      .feature-card .icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      .feature-card h5 {
+        color: var(--primary-white);
+        margin-bottom: 15px;
+        font-family: "Playfair Display", serif;
+      }
+
+      .feature-card p {
+        color: #ddd;
+      }
+
+      footer {
+        background-color: var(--secondary-black);
+        color: var(--primary-white);
+        padding: 50px 0 20px;
+      }
+
+      .footer-title {
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      .footer-links a {
+        color: var(--primary-white);
+        text-decoration: none;
+        transition: var(--transition);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+
+      .social-links a {
+        color: var(--primary-white);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--primary-red);
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-red);
+        color: var(--primary-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        opacity: 0;
+        transition: var(--transition);
+        z-index: 1000;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--primary-white);
+        color: var(--primary-red);
+      }
+
+      /* Hero Typing Effect */
+      .typed-text {
+        color: var(--primary-red);
+      }
+
+      .cursor {
+        display: inline-block;
+        background-color: var(--primary-red);
+        margin-left: 0.1rem;
+        width: 3px;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          background-color: var(--primary-red);
+        }
+        49% {
+          background-color: var(--primary-red);
+        }
+        50% {
+          background-color: transparent;
+        }
+        99% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: var(--primary-red);
+        }
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 12px 30px;
+        border-radius: 0;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .btn-primary:hover {
+        background-color: transparent;
+        border-color: var(--primary-red);
+        color: var(--primary-red);
+        transform: translateY(-3px);
+      }
+
+      .btn-outline-light {
+        border-radius: 0;
+        padding: 12px 30px;
+        transition: var(--transition);
+      }
+
+      .btn-outline-light:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        color: var(--primary-white);
+      }
+
+      /* Fade-up animation classes */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .fade-up.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Copyright text - always visible */
+      .copyright-text {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 120px 0 80px;
+          background: linear-gradient(
+            rgba(10, 10, 10, 0.85),
+            rgba(10, 10, 10, 0.85)
+          ); /* Remove image on mobile */
+        }
+        .nav-logo {
+          height: 40px;
+        }
+        .content-section {
+          padding: 80px 0;
+        }
+
+        .navbar-collapse {
+          background: var(--primary-black);
+          padding: 20px;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
+
+        .display-3 {
+          font-size: 2.5rem;
+        }
+
+        .hero-badge {
+          top: -20px; /* Adjust for mobile */
+          font-size: 12px;
+        }
+
+        .hero-content {
+          padding-top: 20px; /* Adjust for mobile */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background Circles -->
+    <div class="bg-circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/logo.png"
+            alt="Tzedek Law Logo"
+            class="nav-logo me-2"
+          />
+          Tzedek <span>Law</span> LLC
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Story.html">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contact Us.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center hero-content">
+            <span class="hero-badge fade-up"
+              >BOUTIQUE INTERNATIONAL LAW FIRM</span
+            >
+            <h1 class="display-3 fw-bold mb-4 fade-up">
+              Justice and <span class="typed-text"></span>
+              <span class="cursor">&nbsp;</span>
+            </h1>
+            <p class="lead mb-5 fade-up">
+              True to its name, Tzedek Law LLC strives to achieve justice and
+              righteousness in all our dealings. In line with that, our goal is
+              to go over and beyond, and deliver top quality service for our
+              clients.
+            </p>
+            <div class="fade-up">
+              <a href="./Contact Us.html" class="btn btn-primary me-3"
+                >Contact Us</a
+              >
+              <a href="./Our Services.html" class="btn btn-outline-light"
+                >Our Services</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Tzedek Law Section -->
+    <section class="content-section light-bg">
+      <div class="container">
+        <h2 class="fade-up">Why Choose Tzedek Law</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="feature-card fade-up">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <h5>Justice & Integrity</h5>
+              <p>
+                We uphold justice and righteousness in every case we handle.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card fade-up">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h5>Direct Client Communication</h5>
+              <p>
+                Maintaining a direct line between clients and our Directors.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card fade-up">
+              <div class="icon"><i class="bi bi-award"></i></div>
+              <h5>Excellence in Service</h5>
+              <p>
+                Delivering top quality service for both institutional and
+                private clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Summary Section -->
+    <section class="content-section white-bg">
+      <div class="container">
+        <h2 class="fade-up">Professional Summary</h2>
+        <p class="lead text-center fade-up">
+          True to its name, Tzedek Law LLC strives to achieve justice and
+          righteousness in all our dealings. In line with that, our goal is to
+          go over and beyond, and deliver top quality service for our clients.
+        </p>
+        <p class="text-center fade-up">
+          The firm is a boutique, international corporate law firm in Singapore.
+          The directors have an impressive resume advising clients in the areas
+          of corporate law, banking and finance, property matters and financial
+          services.
+        </p>
+        <p class="text-center fade-up">
+          We treasure each relationship; we maintain direct lines of
+          communication between clients and the Director in charge of the
+          matter.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0 fade-up">
+            <h3 class="footer-title">Tzedek Law LLC</h3>
+            <p>
+              Striving to achieve justice and righteousness in all our dealings.
+              A boutique, international corporate law firm in Singapore.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://facebook.com/tzedeklawllc" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tzedek-law-llc"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.instagram.com/tzedeklawllc/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 fade-up">
+            <h5 class="footer-title">Quick Links</h5>
+            <div class="footer-links">
+              <a href="#">Home</a>
+              <a href="./Our Story.html">Our Story</a>
+              <a href="./Our Services.html">Services</a>
+              <a href="./Our Team.html">Our Team</a>
+              <a href="./Testimonials.html">Testimonials</a>
+              <a href="./Contact Us.html">Contact</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0 fade-up">
+            <h5 class="footer-title">Services</h5>
+            <div class="footer-links">
+              <a href="./Our Services.html">Buying a Property</a>
+              <a href="./Our Services.html">Selling a Property</a>
+              <a href="./Our Services.html">Refinancing</a>
+              <a href="./Our Services.html">Drafting of Wills</a>
+              <a href="./Our Services.html">Power of Attorney</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 fade-up">
+            <h5 class="footer-title">Contact Info</h5>
+            <div class="footer-links">
+              <a href="tel:+6562665420"
+                ><i class="fas fa-phone me-2"></i>+65 8809 5777</a
+              >
+              <a href="mailto:jiaern.chuah@tzedeklaw.com.sg"
+                ><i class="fas fa-envelope me-2"></i
+                >jiaern.chuah@tzedeklaw.com.sg</a
+              >
+              <a href="#"
+                ><i class="fas fa-map-marker-alt me-2"></i>111 Somerset Road,<br />#07-15
+                TripleOne Somerset<br />Singapore 238164</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="small mb-0 copyright-text">
+              &copy; 2025 Tzedek Law LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0)";
+        }
+      });
+
+      // Typing effect
+      const typedTextSpan = document.querySelector(".typed-text");
+      const cursorSpan = document.querySelector(".cursor");
+
+      const textArray = ["Righteousness", "Excellence", "Integrity", "Justice"];
+      const typingDelay = 200;
+      const erasingDelay = 100;
+      const newTextDelay = 2000;
+      let textArrayIndex = 0;
+      let charIndex = 0;
+
+      function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+          if (!cursorSpan.classList.contains("typing"))
+            cursorSpan.classList.add("typing");
+          typedTextSpan.textContent +=
+            textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+        }
+      }
+
+      function erase() {
+        if (charIndex > 0) {
+          if (!cursorSpan.classList.contains("typing"))
+            cursorSpan.classList.add("typing");
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(
+            0,
+            charIndex - 1
+          );
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+        } else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+          setTimeout(type, typingDelay + 1100);
+        }
+      }
+
+      // Start typing effect on load
+      document.addEventListener("DOMContentLoaded", function () {
+        if (textArray.length) setTimeout(type, newTextDelay + 250);
+      });
+
+      // Feature card hover effect
+      const featureCards = document.querySelectorAll(".feature-card");
+
+      featureCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-5px)";
+          card.style.boxShadow = "0 5px 15px rgba(186, 23, 23, 0.89);";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0)";
+          card.style.boxShadow = "0 5px 15px rgba(186, 23, 23, 0.89);";
+        });
+      });
+
+      // Fade-up animation on scroll
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) *
+              0.9 && rect.bottom >= 0
+        );
+      }
+
+      function handleScroll() {
+        const elements = document.querySelectorAll(".fade-up");
+        elements.forEach((element) => {
+          if (isInViewport(element)) {
+            element.classList.add("appear");
+          }
+        });
+      }
+
+      // Initialize scroll event listener
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("load", handleScroll);
+      window.addEventListener("resize", handleScroll);
+
+      // Trigger once on page load to check initial state
+      document.addEventListener("DOMContentLoaded", handleScroll);
+    </script>
+  </body>
+</html>

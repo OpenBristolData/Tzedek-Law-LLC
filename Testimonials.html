@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tzedek Law LLC | Testimonials</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2696.svg"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-black: #0a0a0a;
+        --secondary-black: #1a1a1a;
+        --primary-red: #d90429;
+        --secondary-red: #ef233c;
+        --primary-white: #ffffff;
+        --light-gray: #f8f9fa;
+        --dark-gray: #2b2d42;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-white);
+        background-color: var(--primary-black);
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+      .nav-logo {
+        height: 50px;
+        width: auto;
+      }
+
+      /* Animated background elements */
+      .bg-circles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--primary-red);
+        opacity: 0.1;
+        filter: blur(40px);
+        animation: float 15s infinite linear;
+      }
+
+      .circle:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 10%;
+        animation-duration: 20s;
+      }
+
+      .circle:nth-child(2) {
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        right: 5%;
+        animation-duration: 25s;
+        animation-delay: 2s;
+      }
+
+      .circle:nth-child(3) {
+        width: 400px;
+        height: 400px;
+        bottom: 5%;
+        left: 5%;
+        animation-duration: 30s;
+        animation-delay: 1s;
+      }
+
+      .circle:nth-child(4) {
+        width: 350px;
+        height: 350px;
+        top: 15%;
+        right: 15%;
+        animation-duration: 22s;
+        animation-delay: 3s;
+      }
+
+      .circle:nth-child(5) {
+        width: 450px;
+        height: 450px;
+        bottom: 15%;
+        right: 20%;
+        animation-duration: 28s;
+        animation-delay: 4s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, 30px) rotate(90deg);
+        }
+        50% {
+          transform: translate(0, 60px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-20px, 30px) rotate(270deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: rgba(10, 10, 10, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: var(--primary-white);
+        font-size: 1.8rem;
+      }
+
+      .navbar-brand span {
+        color: var(--primary-red);
+      }
+
+      .nav-link {
+        color: var(--primary-white);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-red);
+        transition: var(--transition);
+      }
+
+      .nav-link:hover {
+        color: var(--primary-red);
+      }
+
+      .nav-link:hover:before {
+        width: 100%;
+      }
+
+      .navbar-toggler {
+        border: none;
+        color: var(--primary-white);
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .section-padding {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 50px;
+        font-weight: 700;
+        color: var(--primary-white);
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        background: var(--primary-red);
+        margin: 15px 0;
+      }
+
+      /* Testimonial Cards */
+      .testimonial-card {
+        background: var(--secondary-black);
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: var(--transition);
+        height: 100%;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .testimonial-card.fade-up {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .testimonial-card:before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--primary-red);
+        opacity: 0.3;
+        font-family: "Playfair Display", serif;
+      }
+
+      .testimonial-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary-red);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        color: var(--primary-white);
+      }
+
+      .author-details h5 {
+        margin-bottom: 5px;
+        color: var(--primary-white);
+      }
+
+      .author-details p {
+        color: var(--primary-red);
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      .rating {
+        color: gold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .google-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      /* More Button */
+      .more-btn-container {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      .btn-more {
+        background-color: transparent;
+        border: 2px solid var(--primary-red);
+        color: var(--primary-white);
+        padding: 12px 40px;
+        border-radius: 0;
+        font-weight: 500;
+        transition: var(--transition);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-more:hover {
+        background-color: var(--primary-red);
+        color: var(--primary-white);
+        transform: translateY(-3px);
+      }
+
+      /* Stats Section */
+      .stats-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .stats-number.fade-up {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stats-text {
+        font-size: 1.2rem;
+        color: var(--primary-white);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+      }
+
+      .stats-text.fade-up {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      footer {
+        background-color: var(--secondary-black);
+        color: var(--primary-white);
+        padding: 50px 0 20px;
+      }
+
+      .footer-title {
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      .footer-links a {
+        color: var(--primary-white);
+        text-decoration: none;
+        transition: var(--transition);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+
+      .social-links a {
+        color: var(--primary-white);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--primary-red);
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-red);
+        color: var(--primary-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        opacity: 0;
+        transition: var(--transition);
+        z-index: 1000;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--primary-white);
+        color: var(--primary-red);
+      }
+
+      /* Fade-up animation for section titles */
+      .section-title,
+      .lead {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .section-title.fade-up,
+      .lead.fade-up {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 80px 0;
+        }
+        .nav-logo {
+          height: 40px;
+        }
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .navbar-collapse {
+          background: var(--primary-black);
+          padding: 20px;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
+
+        .testimonial-card,
+        .stats-number,
+        .stats-text,
+        .section-title,
+        .lead {
+          transition-duration: 0.8s;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background Circles -->
+    <div class="bg-circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/logo.png"
+            alt="Tzedek Law Logo"
+            class="nav-logo me-2"
+          />
+          Tzedek <span>Law</span> LLC
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Story.html">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contact Us.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding" style="padding-top: 150px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="lead mb-5">
+              Hear what our clients have to say about their experience with
+              Tzedek Law LLC
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  fantastic experience working with Mr Lionel Yun, the lawyer
+                  and founder of the firm. He is super candid, thorough and
+                  efficient. He has a super responsive assistant Jia Ern too.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>JOSH HAN</h5>
+                    <p>Property Buyers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  I had a great experience working with Chuah Jia Ern on our
+                  property purchase. She was professional, responsive, and made
+                  the entire process smooth and stress-free. We truly
+                  appreciated the clear guidance and prompt support throughout.
+                  Highly recommend!
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Nicky Aung</h5>
+                    <p>Refinancing Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  Thank you Tzedak Law and Jia Ern for making our bank loan
+                  recontract process painless and easy. They were responsive and
+                  kept us informed about the upcoming steps so that we were not
+                  surprised by anything. Highly recommended!
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Jiesi Huang</h5>
+                    <p>Estate Planning Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10极22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  I enjoyed working with Tzedek Law on my HDB resale purchase
+                  and my parents' wills. Jia Ern and Wui Jeh were friendly and
+                  patient throughout our engagement, from explaining the
+                  documentation to answering our queries on the process and
+                  terms in the will. Thank you for your help, Tzedek team. Much
+                  appreciated.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Charmaine Cher</h5>
+                    <p>Property Seller</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More Button -->
+        <div class="more-btn-container">
+          <a
+            href="https://www.google.com.sg/maps/place/Tzedek+Law+LLC/@1.3001739,103.8347149,17z/data=!3m1!5s0x31da1990e6053aef:0xb078e63621ede4d0!4m8!3m7!1s0x31da171d74d0293b:0x7d46f9e73c95dce9!8m2!3d1.3001685!4d103.8372952!9m1!1b1!16s%2Fg%2F11h53zb0yt?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            class="btn btn-more"
+            >More Reviews</a
+          >
+        </div>
+
+        <!-- Stats Section -->
+        <div class="row mt-5 pt-5">
+          <div class="col-md-3 col-6 text-center">
+            <p class="stats-number" data-count="3500">0</p>
+            <p class="stats-text">Conveyancing Transactions</p>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <p class="stats-number" data-count="100">0</p>
+            <p class="stats-text">Client Satisfaction Rate</p>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <p class="stats-number" data-count="90">0</p>
+            <p class="stats-text">5-Star Reviews</p>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <p class="stats-number" data-count="8">0</p>
+            <p class="stats-text">Years of Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h3 class="footer-title">Tzedek Law LLC</h3>
+            <p>
+              Striving to achieve justice and righteousness in all our dealings.
+              A boutique, international corporate law firm in Singapore.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://facebook.com/tzedeklawllc" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tzedek-law-llc"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.instagram.com/tzedeklawllc/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Quick Links</h5>
+            <div class="footer-links">
+              <a href="./index.html">Home</a>
+              <a href="./Our Story.html">Our Story</a>
+              <a href="./Our Services.html">Services</a>
+              <a href="./Our Team.html">Our Team</a>
+              <a href="./Testimonials.html">Testimonials</a>
+              <a href="./Contact Us.html">Contact</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Services</h5>
+            <div class="footer-links">
+              <a href="./Our Services.html">Buying a Property</a>
+              <a href="./Our Services.html">Selling a Property</a>
+              <a href="./Our Services.html">Refinancing</a>
+              <a href="./Our Services.html">Drafting of Wills</a>
+              <a href="./Our Services.html">Power of Attorney</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title">Contact Info</h5>
+            <div class="footer-links">
+              <a href="tel:+6562665420"
+                ><i class="fas fa-phone me-2"></i>+65 8809 5777</a
+              >
+              <a href="mailto:jiaern.chuah@tzedeklaw.com.sg"
+                ><i class="fas fa-envelope me-2"></i
+                >jiaern.chuah@tzedeklaw.com.sg</a
+              >
+              <a href="#"
+                ><i class="fas fa-map-marker-alt me-2"></i>111 Somerset Road,<br />#07-15
+                TripleOne Somerset<br />Singapore 238164</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="small mb-0">
+              &copy; 2025 Tzedek Law LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0)";
+        }
+      });
+
+      // Stats counter animation
+      const counters = document.querySelectorAll(".stats-number");
+      const speed = 200;
+
+      const animateCounters = () => {
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-count");
+          const count = +counter.innerText;
+
+          const inc = target / speed;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(() => animateCounters(), 1);
+          } else {
+            counter.innerText = target;
+          }
+        });
+      };
+
+      // Fade-up animation on scroll
+      const fadeUpElements = document.querySelectorAll(
+        ".testimonial-card, .stats-number, .stats-text, .section-title, .lead"
+      );
+
+      const fadeUpOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const fadeUpObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("fade-up");
+          observer.unobserve(entry.target);
+        });
+      }, fadeUpOptions);
+
+      fadeUpElements.forEach((element) => {
+        fadeUpObserver.observe(element);
+      });
+
+      // Start counter animation when stats section is in view
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounters();
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      // Observe the stats section
+      const statsSection = document.querySelector(".stats-number");
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+
+      // Testimonial card hover effect
+      const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+      testimonialCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          if (card.classList.contains("fade-up")) {
+            card.style.transform = "translateY(-5px)";
+          }
+          card.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.3)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          if (card.classList.contains("fade-up")) {
+            card.style.transform = "translateY(0)";
+          }
+          card.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.2)";
+        });
+      });
+
+      // More button hover effect
+      const moreButton = document.querySelector(".btn-more");
+
+      moreButton.addEventListener("mouseenter", () => {
+        moreButton.style.transform = "translateY(-3px)";
+      });
+
+      moreButton.addEventListener("mouseleave", () => {
+        moreButton.style.transform = "translateY(0)";
+      });
+    </script>
+  </body>
+</html>

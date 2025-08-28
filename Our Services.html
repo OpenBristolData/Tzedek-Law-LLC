@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tzedek Law LLC | Our Services</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2696.svg"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-black: #0a0a0a;
+        --secondary-black: #1a1a1a;
+        --primary-red: #d90429;
+        --secondary-red: #ef233c;
+        --primary-white: #ffffff;
+        --light-gray: #f8f9fa;
+        --dark-gray: #2b2d42;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-white);
+        background-color: var(--primary-black);
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* Animated background elements */
+      .bg-circles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--primary-red);
+        opacity: 0.1;
+        filter: blur(40px);
+        animation: float 15s infinite linear;
+      }
+
+      .circle:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 10%;
+        animation-duration: 20s;
+      }
+
+      .circle:nth-child(2) {
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        right: 5%;
+        animation-duration: 25s;
+        animation-delay: 2s;
+      }
+
+      .circle:nth-child(3) {
+        width: 400px;
+        height: 400px;
+        bottom: 5%;
+        left: 5%;
+        animation-duration: 30s;
+        animation-delay: 1s;
+      }
+
+      .circle:nth-child(4) {
+        width: 350px;
+        height: 350px;
+        top: 15%;
+        right: 15%;
+        animation-duration: 22s;
+        animation-delay: 3s;
+      }
+
+      .circle:nth-child(5) {
+        width: 450px;
+        height: 450px;
+        bottom: 15%;
+        right: 20%;
+        animation-duration: 28s;
+        animation-delay: 4s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, 30px) rotate(90deg);
+        }
+        50% {
+          transform: translate(0, 60px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-20px, 30px) rotate(270deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: rgba(10, 10, 10, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+      .nav-logo {
+        height: 50px;
+        width: auto;
+      }
+
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: var(--primary-white);
+        font-size: 1.8rem;
+      }
+
+      .navbar-brand span {
+        color: var(--primary-red);
+      }
+
+      .nav-link {
+        color: var(--primary-white);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-red);
+        transition: var(--transition);
+      }
+
+      .nav-link:hover {
+        color: var(--primary-red);
+      }
+
+      .nav-link:hover:before {
+        width: 100%;
+      }
+
+      .navbar-toggler {
+        border: none;
+        color: var(--primary-white);
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .section-padding {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 50px;
+        font-weight: 700;
+        color: var(--primary-white);
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        background: var(--primary-red);
+        margin: 15px 0;
+      }
+
+      /* Cards */
+      .card {
+        border: none;
+        border-radius: 0;
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        background-color: var(--secondary-black);
+        color: var(--primary-white);
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .service-card {
+        padding: 30px;
+        text-align: center;
+        border-bottom: 3px solid transparent;
+        transition: var(--transition);
+      }
+
+      .service-card:hover {
+        border-bottom: 3px solid var(--primary-red);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      /* Legal Disclaimer */
+      .disclaimer {
+        background: #fff3f3;
+        border: 1px solid #f5c2c7;
+        border-radius: 16px;
+        padding: 2rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #5a5a5a;
+      }
+      .disclaimer h5 {
+        color: var(--secondary-red);
+        font-weight: 600;
+      }
+
+      footer {
+        background-color: var(--secondary-black);
+        color: var(--primary-white);
+        padding: 50px 0 20px;
+      }
+
+      .footer-title {
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      .footer-links a {
+        color: var(--primary-white);
+        text-decoration: none;
+        transition: var(--transition);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+
+      .social-links a {
+        color: var(--primary-white);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--primary-red);
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-red);
+        color: var(--primary-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        opacity: 0;
+        transition: var(--transition);
+        z-index: 1000;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--primary-white);
+        color: var(--primary-red);
+      }
+
+      /* Service Grid Layout */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Ancillary Services */
+      .ancillary-service {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: var(--secondary-black);
+        transition: var(--transition);
+      }
+
+      .ancillary-service:hover {
+        background-color: rgba(217, 4, 41, 0.1);
+      }
+
+      .ancillary-icon {
+        font-size: 2rem;
+        color: var(--primary-red);
+        margin-right: 15px;
+        min-width: 50px;
+      }
+
+      /* Fade-up animation styles */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Staggered delays for sequential animations */
+      .fade-up.delay-1 {
+        transition-delay: 0.1s;
+      }
+      .fade-up.delay-2 {
+        transition-delay: 0.2s;
+      }
+      .fade-up.delay-3 {
+        transition-delay: 0.3s;
+      }
+      .fade-up.delay-4 {
+        transition-delay: 0.4s;
+      }
+      .fade-up.delay-5 {
+        transition-delay: 0.5s;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 700px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 80px 0;
+        }
+        .nav-logo {
+          height: 40px;
+        }
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .navbar-collapse {
+          background: var(--primary-black);
+          padding: 20px;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background Circles -->
+    <div class="bg-circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/logo.png"
+            alt="Tzedek Law Logo"
+            class="nav-logo me-2"
+          />
+          Tzedek <span>Law</span> LLC
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Story.html">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Our Team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contact Us.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="section-padding" style="padding-top: 150px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-title fade-up">Our Services</h2>
+            <p class="lead mb-5 fade-up delay-1">
+              Comprehensive legal services tailored to meet your property and
+              estate planning needs
+            </p>
+          </div>
+        </div>
+
+        <!-- Main Services Cards - Centered -->
+        <div class="services-grid">
+          <div class="card service-card fade-up delay-1">
+            <div class="service-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Buying a Property</h3>
+            <p>
+              Buying a home or making an investment? Appoint us to act for you
+              or your client. Our experienced team will guide you through the
+              entire process, ensuring all legal aspects are properly handled.
+            </p>
+          </div>
+          <div class="card service-card fade-up delay-2">
+            <div class="service-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <h3>Selling a Property</h3>
+            <p>
+              Selling your home or divesting your holdings? We're more than
+              happy to assist you. We handle all legal documentation and ensure
+              a smooth transaction from start to finish.
+            </p>
+          </div>
+          <div class="card service-card fade-up delay-3">
+            <div class="service-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Refinancing</h3>
+            <p>
+              Take advantage of lower interest rates and appoint us as your
+              solicitor. Check whether you are eligible. We'll handle all the
+              legal paperwork to make the process seamless.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <h3
+              class="mb-4 text-center fade-up delay-4"
+              style="
+                color: var(--primary-white);
+                border-bottom: 2px solid var(--primary-red);
+                padding-bottom: 10px;
+                display: inline-block;
+              "
+            >
+              Ancillary Services
+            </h3>
+            <div class="row justify-content-center">
+              <div class="col-md-5 mb-4">
+                <div class="ancillary-service fade-up delay-4">
+                  <div class="ancillary-icon">
+                    <i class="fas fa-file-contract"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Drafting of Wills</h5>
+                    <p class="mb-0">
+                      Ensure your assets are distributed according to your
+                      wishes with our professional will drafting services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 mb-4">
+                <div class="ancillary-service fade-up delay-5">
+                  <div class="ancillary-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Lasting Power of Attorney (LPA)</h5>
+                    <p class="mb-0">
+                      Plan for the future by appointing someone you trust to
+                      make decisions on your behalf should you lose mental
+                      capacity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-5 mb-4">
+                <div class="ancillary-service fade-up delay-5">
+                  <div class="ancillary-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Power of Attorney (POA)</h5>
+                    <p class="mb-0">
+                      Authorize someone to act on your behalf for specific
+                      matters or during specific periods.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal Disclaimer -->
+        <div class="disclaimer mt-5 fade-up">
+          <h5><i class="bi bi-shield-exclamation me-2"></i>Legal Disclaimer</h5>
+          <p>
+            No Attorney-Client Relationship or Legal Advice Through Provision of
+            Information.
+          </p>
+          <p>
+            Communication of information by, in, to or through this website and
+            your receipt or use of it does not create or constitute an
+            attorney-client relationship, is not intended to constitute or
+            convey legal advice, and is not a substitute for obtaining legal
+            advice from a qualified attorney. You should not act upon any such
+            information without first seeking qualified professional counsel on
+            your specific matter.
+          </p>
+          <p>
+            The hiring of an attorney is an important decision that should not
+            be based solely upon website communications or advertisements. You
+            also should not rely upon the transmission of a message through this
+            website to create an attorney-client relationship. Without a formal
+            attorney-client relationship in the matter, we cannot guarantee that
+            your communications will be privileged or that we will treat them as
+            such.
+          </p>
+          <p>
+            You agree that we are not liable to you or others, in any way or for
+            any damages of any kind, arising from this site, or your access to
+            or use of or reliance on the information in or through this site,
+            including but not limited to liability or damages under contract or
+            tort theories or any damages caused by viruses contained within
+            electronic files of this site or any linked site, regardless of
+            prior notice to us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h3 class="footer-title">Tzedek Law LLC</h3>
+            <p>
+              Striving to achieve justice and righteousness in all our dealings.
+              A boutique, international corporate law firm in Singapore.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://facebook.com/tzedeklawllc" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tzedek-law-llc"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.instagram.com/tzedeklawllc/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Quick Links</h5>
+            <div class="footer-links">
+              <a href="./index.html">Home</a>
+              <a href="./Our Story.html">Our Story</a>
+              <a href="./Our Services.html">Services</a>
+              <a href="./Our Team.html">Our Team</a>
+              <a href="./Testimonials.html">Testimonials</a>
+              <a href="./Contact Us.html">Contact</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Services</h5>
+            <div class="footer-links">
+              <a href="./Our Services.html">Buying a Property</a>
+              <a href="./Our Services.html">Selling a Property</a>
+              <a href="./Our Services.html">Refinancing</a>
+              <a href="./Our Services.html">Drafting of Wills</a>
+              <a href="./Our Services.html">Power of Attorney</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title">Contact Info</h5>
+            <div class="footer-links">
+              <a href="tel:+6562665420"
+                ><i class="fas fa-phone me-2"></i>+65 8809 5777</a
+              >
+              <a href="mailto:jiaern.chuah@tzedeklaw.com.sg"
+                ><i class="fas fa-envelope me-2"></i
+                >jiaern.chuah@tzedeklaw.com.sg</a
+              >
+              <a href="#"
+                ><i class="fas fa-map-marker-alt me-2"></i>111 Somerset Road,<br />#07-15
+                TripleOne Somerset<br />Singapore 238164</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="small mb-0">
+              &copy; 2025 Tzedek Law LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0)";
+        }
+      });
+
+      // Service card hover effect enhancement
+      const serviceCards = document.querySelectorAll(".service-card");
+
+      serviceCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-10px)";
+          card.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.4)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0)";
+          card.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.2)";
+        });
+      });
+
+      // Fade-up animation on scroll
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) *
+              0.9 && rect.bottom >= 0
+        );
+      }
+
+      function checkFadeUp() {
+        const elements = document.querySelectorAll(".fade-up");
+        elements.forEach((element) => {
+          if (isElementInViewport(element)) {
+            element.classList.add("visible");
+          }
+        });
+      }
+
+      // Initial check on page load
+      window.addEventListener("load", checkFadeUp);
+
+      // Check on scroll
+      window.addEventListener("scroll", checkFadeUp);
+
+      // Check on resize
+      window.addEventListener("resize", checkFadeUp);
+    </script>
+  </body>
+</html>
