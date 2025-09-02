@@ -340,27 +340,39 @@
       }
 
       /* Stats Section */
+      .stats-container {
+        position: relative;
+      }
+
       .stats-number {
         font-size: 3rem;
         font-weight: 700;
         color: var(--primary-red);
-        margin-bottom: 0;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
       }
-
       .stats-number.fade-up {
         opacity: 1;
         transform: translateY(0);
       }
 
+      .stats-plus,
+      .stats-percent {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-left: 2px;
+        margin-top: 10px;
+        line-height: 1;
+        align-self: flex-start;
+      }
+
       .stats-text {
         font-size: 1.2rem;
         color: var(--primary-white);
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+        margin-bottom: 0;
       }
 
       .stats-text.fade-up {
@@ -577,16 +589,15 @@
               </div>
               <div class="testimonial-content">
                 <p class="testimonial-text">
-                  fantastic experience working with Mr Lionel Yun, the lawyer
-                  and founder of the firm. He is super candid, thorough and
-                  efficient. He has a super responsive assistant Jia Ern too.
+                  Lionel was knowledge and professional. Business development
+                  manager was efficient. I ad a very good e
                 </p>
                 <div class="testimonial-author">
                   <div class="author-avatar">
                     <i class="fas fa-user"></i>
                   </div>
                   <div class="author-details">
-                    <h5>JOSH HAN</h5>
+                    <h5>Gan Chin Kiat</h5>
                     <p>Property Buyers</p>
                   </div>
                 </div>
@@ -627,18 +638,75 @@
               </div>
               <div class="testimonial-content">
                 <p class="testimonial-text">
-                  I had a great experience working with Chuah Jia Ern on our
-                  property purchase. She was professional, responsive, and made
-                  the entire process smooth and stress-free. We truly
-                  appreciated the clear guidance and prompt support throughout.
-                  Highly recommend!
+                  I recently had the pleasure of working with Lionel on a
+                  property matter, and I am very grateful for his assistance.
+                  From the very first interaction, Lionel demonstrated profound
+                  expertise. Throughout the process, Lionel was incredibly
+                  responsive, patient, and thorough. His guidance was
+                  invaluable, and I truly felt supported every step of the way.
+                  I would recommend Lionel to anyone in need of a property
+                  lawyer. I feel fortunate to have received his assistance.
+                  Thank you, Lionel for going above and beyond!
                 </p>
                 <div class="testimonial-author">
                   <div class="author-avatar">
                     <i class="fas fa-user"></i>
                   </div>
                   <div class="author-details">
-                    <h5>Nicky Aung</h5>
+                    <h5>Yi Mei Leow</h5>
+                    <p>Property Buyers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  Lionel Yun is the best lawyer you can ever find when it comes
+                  to Real Estate and related matters. He is the most dedicated
+                  lawyer I have been working with who always works for the best
+                  interests of his clients. I wholeheartedly recommend Lionel
+                  and his law firm Tzedek Law for the best services in Real
+                  Estate Law.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Vanessa Vu</h5>
                     <p>Refinancing Client</p>
                   </div>
                 </div>
@@ -679,17 +747,17 @@
               </div>
               <div class="testimonial-content">
                 <p class="testimonial-text">
-                  Thank you Tzedak Law and Jia Ern for making our bank loan
-                  recontract process painless and easy. They were responsive and
-                  kept us informed about the upcoming steps so that we were not
-                  surprised by anything. Highly recommended!
+                  The professional, detailed and comprehensive advice and
+                  service has been exceptional. Lionel took the time to explain
+                  each step carefully and gave us the confidence that we are in
+                  good hands. For that, I am grateful.
                 </p>
                 <div class="testimonial-author">
                   <div class="author-avatar">
                     <i class="fas fa-user"></i>
                   </div>
                   <div class="author-details">
-                    <h5>Jiesi Huang</h5>
+                    <h5>Dominic Bose</h5>
                     <p>Estate Planning Client</p>
                   </div>
                 </div>
@@ -730,19 +798,168 @@
               </div>
               <div class="testimonial-content">
                 <p class="testimonial-text">
-                  I enjoyed working with Tzedek Law on my HDB resale purchase
-                  and my parents' wills. Jia Ern and Wui Jeh were friendly and
-                  patient throughout our engagement, from explaining the
-                  documentation to answering our queries on the process and
-                  terms in the will. Thank you for your help, Tzedek team. Much
-                  appreciated.
+                  I had a positive experience with this law firm. They
+                  maintained a high level of professionalism throughout the
+                  process, consistently meeting my expectations. Additionally,
+                  their friendly demeanor made the experience all the more
+                  pleasant.
                 </p>
                 <div class="testimonial-author">
                   <div class="author-avatar">
                     <i class="fas fa-user"></i>
                   </div>
                   <div class="author-details">
-                    <h5>Charmaine Cher</h5>
+                    <h5>Kai Koh</h5>
+                    <p>Property Seller</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10极22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  I had a fantastic experience with this law firm while dealing
+                  with my bank loan repayment. The team was professional,
+                  efficient, and always available to answer my questions. Their
+                  swift service really made a difference. Thank you for the
+                  outstanding support.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Qiang Li</h5>
+                    <p>Property Seller</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10极22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  Wonderful service. Great attention to detail made the whole
+                  transaction painless. Professional, nice people.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>Graham Bell</h5>
+                    <p>Property Seller</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="testimonial-card">
+              <div class="rating">
+                <svg
+                  class="google-logo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10极22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  Lionel and his team are a real pleasure to work
+                  with—attentive, helpful, and reassuring. Lionel often went
+                  above and beyond to provide advice and was often very quick to
+                  respond to questions and concerns. I would be very happy to
+                  use their services again in future.
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="author-details">
+                    <h5>wendy gan</h5>
                     <p>Property Seller</p>
                   </div>
                 </div>
@@ -763,21 +980,37 @@
 
         <!-- Stats Section -->
         <div class="row mt-5 pt-5">
-          <div class="col-md-3 col-6 text-center">
-            <p class="stats-number" data-count="3500">0</p>
-            <p class="stats-text">Conveyancing Transactions</p>
+          <div class="col-md-3 col-6 text-center fade-up-element delay-1">
+            <div class="stats-container">
+              <p class="stats-number" data-count="3500">
+                0<span class="stats-plus">++</span>
+              </p>
+              <p class="stats-text">Case no</p>
+            </div>
           </div>
-          <div class="col-md-3 col-6 text-center">
-            <p class="stats-number" data-count="100">0</p>
-            <p class="stats-text">Client Satisfaction Rate</p>
+          <div class="col-md-3 col-6 text-center fade-up-element delay-2">
+            <div class="stats-container">
+              <p class="stats-number" data-count="100">
+                0<span class="stats-percent">%</span>
+              </p>
+              <p class="stats-text">Client Satisfaction Rate</p>
+            </div>
           </div>
-          <div class="col-md-3 col-6 text-center">
-            <p class="stats-number" data-count="90">0</p>
-            <p class="stats-text">5-Star Reviews</p>
+          <div class="col-md-3 col-6 text-center fade-up-element delay-3">
+            <div class="stats-container">
+              <p class="stats-number" data-count="90">
+                0<span class="stats-plus">++</span>
+              </p>
+              <p class="stats-text">5-Star Reviews</p>
+            </div>
           </div>
-          <div class="col-md-3 col-6 text-center">
-            <p class="stats-number" data-count="8">0</p>
-            <p class="stats-text">Years of Experience</p>
+          <div class="col-md-3 col-6 text-center fade-up-element delay-4">
+            <div class="stats-container">
+              <p class="stats-number" data-count="15">
+                0<span class="stats-plus">&nbsp;years</span>
+              </p>
+              <p class="stats-text">Years of Experience</p>
+            </div>
           </div>
         </div>
       </div>
@@ -891,27 +1124,45 @@
           navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0)";
         }
       });
-
       // Stats counter animation
       const counters = document.querySelectorAll(".stats-number");
       const speed = 200;
 
       const animateCounters = () => {
         counters.forEach((counter) => {
+          // Get the target number from data-count attribute
           const target = +counter.getAttribute("data-count");
-          const count = +counter.innerText;
+
+          // Get only the numeric part (ignore any symbols in the text)
+          const currentText = counter.innerText;
+          const count = +currentText.replace(/\D/g, "");
 
           const inc = target / speed;
 
           if (count < target) {
-            counter.innerText = Math.ceil(count + inc);
+            // Update only the numeric part of the content
+            const newNumber = Math.ceil(count + inc);
+
+            // Check if we have symbols to preserve
+            const symbolElement = counter.querySelector(
+              ".stats-plus, .stats-percent"
+            );
+            const symbol = symbolElement ? symbolElement.outerHTML : "";
+
+            // Update the counter with number + symbol
+            counter.innerHTML = newNumber + symbol;
+
             setTimeout(() => animateCounters(), 1);
           } else {
-            counter.innerText = target;
+            // Final value with preserved symbols
+            const symbolElement = counter.querySelector(
+              ".stats-plus, .stats-percent"
+            );
+            const symbol = symbolElement ? symbolElement.outerHTML : "";
+            counter.innerHTML = target + symbol;
           }
         });
       };
-
       // Fade-up animation on scroll
       const fadeUpElements = document.querySelectorAll(
         ".testimonial-card, .stats-number, .stats-text, .section-title, .lead"
