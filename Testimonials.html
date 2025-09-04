@@ -457,6 +457,15 @@
       }
 
       /* Responsive Adjustments */
+      /*Moved Gallery css*/
+      @media (max-width: 992px) {
+        .slider-container {
+          aspect-ratio: 4/3;
+        }
+        .slide img {
+          height: 400px;
+        }
+      }
       @media (max-width: 768px) {
         .section-padding {
           padding: 80px 0;
@@ -482,6 +491,167 @@
         .lead {
           transition-duration: 0.8s;
         }
+        /*Moved Gallery css*/
+        .slide img {
+          height: 300px;
+        }
+
+        .slider-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+        .slider-container {
+          aspect-ratio: 1/1;
+        }
+        .community-slider {
+          padding: 60px 0;
+        }
+      }
+      /*Moved Gallery css*/
+      @media (max-width: 576px) {
+        .slide img {
+          height: 250px;
+        }
+
+        .slider-arrow {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+
+        .slide-caption {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+      }
+      /*Moved Gallery css*/
+      /* Community Slider Section */
+      .community-slider {
+        padding: 80px 0;
+      }
+
+      .slider-title {
+        text-align: center;
+        margin-bottom: 50px;
+        color: var(--primary-white);
+      }
+
+      .slider-container {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        aspect-ratio: 16/9; /* Maintain aspect ratio */
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+      }
+
+      .slide {
+        min-width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-black); /* Background for empty space */
+      }
+
+      .slide img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Maintain aspect ratio */
+      }
+
+      .slide-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.8);
+        padding: 15px;
+        color: var(--primary-white);
+        text-align: center;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .slider-btn {
+        background: var(--primary-red);
+        color: var(--primary-white);
+        border: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: var(--transition);
+      }
+
+      .slider-btn:hover {
+        background: var(--secondary-red);
+      }
+
+      .slider-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        background: var(--dark-gray);
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .indicator.active {
+        background: var(--primary-red);
+        transform: scale(1.2);
+      }
+
+      .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(10, 10, 10, 0.6);
+        color: var(--primary-white);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slider-arrow:hover {
+        background: var(--primary-red);
+      }
+
+      .slider-arrow.prev {
+        left: 15px;
+      }
+
+      .slider-arrow.next {
+        right: 15px;
       }
     </style>
   </head>
@@ -978,6 +1148,118 @@
           >
         </div>
 
+        <!-- Community Slider Section -->
+        <div class="community-slider">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="slider-title section-title fade-up-element">
+                Giving back to the community of Singapore
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="slider-container fade-up-element delay-1">
+                <div class="slider">
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(4).JPG"
+                      alt="Community Service 1"
+                    />
+                    <div class="slide-caption">
+                      Meet the people session at AMK
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(7).JPG"
+                      alt="Community Service 2"
+                    />
+                    <div class="slide-caption">My kids are helping me out</div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(1).jpg"
+                      alt="Community Service 2"
+                    />
+                    <div class="slide-caption">
+                      I was honoured to have the opportunity to meet Mr. Lee
+                      Hsien Loong at the 2025 Chinese New Year event.
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(2).jpg"
+                      alt="Community Service 2"
+                    />
+                    <div class="slide-caption">
+                      I had the opportunity to meet Mdm. Ho Ching at the 2025
+                      Chinese New Year event
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(5).jpg"
+                      alt="Community Service 2"
+                    />
+                    <div class="slide-caption">
+                      Will and LPA session _ Grandeur 8
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(10).jpeg"
+                      alt="Community Service 3"
+                    />
+                    <div class="slide-caption">
+                      Walking the grounds at AMK with comrades
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(11).jpeg"
+                      alt="Community Service 3"
+                    />
+                    <div class="slide-caption">
+                      Walking the grounds with Dr.Vasoo and comrades
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(3).JPG"
+                      alt="Community Service 4"
+                    />
+                    <div class="slide-caption">GE 2025</div>
+                  </div>
+                  <div class="slide">
+                    <img
+                      src="https://raw.githubusercontent.com/OpenBristolData/Tzedek-Law-LLC/refs/heads/main/img%20(9).jpg"
+                      alt="Community Service 5"
+                    />
+                    <div class="slide-caption">GE 2025</div>
+                  </div>
+                </div>
+                <button class="slider-arrow prev">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow next">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="slider-indicators fade-up-element delay-2">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+                <span class="indicator" data-index="5"></span>
+                <span class="indicator" data-index="6"></span>
+                <span class="indicator" data-index="7"></span>
+                <span class="indicator" data-index="8"></span>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Stats Section -->
         <div class="row mt-5 pt-5">
           <div class="col-md-3 col-6 text-center fade-up-element delay-1">
@@ -1024,7 +1306,7 @@
             <h3 class="footer-title">Tzedek Law LLC</h3>
             <p>
               Striving to achieve justice and righteousness in all our dealings.
-              A boutique, international corporate law firm in Singapore.
+              A boutique, international conveyancing law firm in Singapore.
             </p>
             <div class="social-links mt-3">
               <a href="https://facebook.com/tzedeklawllc" target="_blank"
@@ -1233,6 +1515,63 @@
       moreButton.addEventListener("mouseleave", () => {
         moreButton.style.transform = "translateY(0)";
       });
+
+      //Moved Gallery JS
+      // Community Slider Functionality
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slide");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+      const indicators = document.querySelectorAll(".indicator");
+
+      let currentSlide = 0;
+      const slideCount = slides.length;
+
+      // Function to update slider position
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update active indicator
+        indicators.forEach((indicator, index) => {
+          if (index === currentSlide) {
+            indicator.classList.add("active");
+          } else {
+            indicator.classList.remove("active");
+          }
+        });
+      }
+
+      // Next slide
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlider();
+      }
+
+      // Previous slide
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlider();
+      }
+
+      // Go to specific slide
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+
+      // Event listeners
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      indicators.forEach((indicator) => {
+        indicator.addEventListener("click", () => {
+          const index = parseInt(indicator.getAttribute("data-index"));
+          goToSlide(index);
+        });
+      });
+
+      // Auto slide every 5 seconds
+      setInterval(nextSlide, 5000);
     </script>
   </body>
 </html>
